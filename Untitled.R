@@ -6,5 +6,10 @@ head(swiss1)
 str <- sampler::ssamp(df = swiss1, n = 30, strata = REG)
 str
 print(str)
-#adfafdasadsfasf
+#adfafdasadsf
+
+fatal <- c(1,2,3,4,1,2,3,4,10,1,2,3,4,100, -1)
+graphics.off()
+b3 <- boxplot(fatal, range = 1.5, main = "plot", ylab = "y")
+b3$out
 
