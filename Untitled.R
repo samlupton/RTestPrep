@@ -1,13 +1,10 @@
-# Load the original swiss dataset
 data(swiss)
-
-# Create a copy called swiss1
 swiss1 <- swiss
-
-# Add a new column "REG" for stratification (randomly assigning regions)
-set.seed(123)  # For reproducibility
-swiss1$REG <- sample(c("Region A", "Region B", "Region C"), size = nrow(swiss1), replace = TRUE)
-
-# View the first few rows of swiss1 to confirm
+set.seed(123)
+swiss1$REG <- rep(c("Region A", "Region B", "Region C"), length.out = nrow(swiss1))
 head(swiss1)
+str <- sampler::ssamp(df = swiss1, n = 30, strata = REG)
+str
+print(str)
+#adfafdasadsfasf
 
