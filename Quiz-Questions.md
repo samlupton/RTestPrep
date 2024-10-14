@@ -1,4 +1,5 @@
 # Quiz 1
+
 ## 1
 **Find the mean WEIGHT of SMBUFFALO fish to 4 decimal places.**
 ```r
