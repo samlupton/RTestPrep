@@ -77,3 +77,6 @@ z <- (l-mean(l))/sd(l)
 z
 #how to find outliers
 l[abs(z) > 3]
+
+#how to find possible outliers
+l[abs(z) < 3 & abs(z) > 2]
