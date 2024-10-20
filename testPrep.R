@@ -55,7 +55,7 @@ library(dplyr)
 dplyrcat <- ddt %>% filter(SPECIES == "CCATFISH")
 dplyrcat
 
-#practice on how to use pipelining
+#practice on how to use pipelining in R.
 
 #1
 ddt %>% filter(SPECIES == "SMBUFFALO") %>% summarize(mean_WEIGHT = mean(WEIGHT))
