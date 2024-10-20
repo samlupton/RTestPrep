@@ -1,10 +1,11 @@
-v <- read.csv("SEEDLING.csv")
-df <- v$Abundance
-tt <- table(df, v$Type)
+
+#How to create tables in R
+
+v <- read.csv(file.choose())
+tt <- table(v$Abundance, v$Type)
 att <- addmargins(tt)
 att 
 
-14/51
 #data <- read.csv("MTBE.csv")
 #tab <- with(data, table(WellClass, `MTBE.Detect`))
 #addmargins(tab)
@@ -59,12 +60,18 @@ dplyrcat
 
 #1
 ddt %>% filter(SPECIES == "SMBUFFALO") %>% summarize(mean_WEIGHT = mean(WEIGHT))
+mean(ddt[ddt$SPECIES == "SMBUFFALO",]$WEIGHT)
+
 #2
 ddt %>% filter(SPECIES == "CCATFISH" & DDT > 33) %>% summarize(mean_LENGTH = mean(LENGTH))
+mean(ddt[ddt$SPECIES == "CCATFISH" & ddt$DDT > 33,]$LENGTH)
 
+#3
 ddt%>% filter(SPECIES == "LMBASS" | SPECIES == "SMBUFFALO") %>% summarize(sd_DDT = sd(DDT))
+sd(ddt[ddt$SPECIES == "LMBASS" | ddt$SPECIES == "SMBUFFALO",]$DDT)
 
-ddt %>% filter(LENGTH > 40 & WEIGHT > 1000)
+#nrow counts number of rows
+nrow(ddt[ddt$LENGTH > 40 & ddt$WEIGHT > 1000,])
 
 ddt %>% filter(SPECIES == "LMBASS" & LENGTH > 30)
 
