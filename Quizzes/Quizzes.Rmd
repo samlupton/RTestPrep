@@ -157,6 +157,7 @@ att
 <img src="images/tables-r-4.png" alt="Image" style="border: 2px solid black; padding: 5px;">
 
 # DP Stem R Functions
+<img src="images/dp-start.png" alt="Image" style="border: 2px solid black; padding: 5px;">
 
 ## Question 1
 <img src="images/dp-1.png" alt="Image" style="border: 2px solid black; padding: 5px;">
@@ -254,7 +255,7 @@ pnorm(8, mean = 10, sd = 5) - pnorm(3, mean = 10, sd = 5)
 ## Question 3
 <img src="images/pnorm-3.png" alt="Image" style="border: 2px solid black; padding: 5px;">
 ```{r}
-pnorm(2, mean = 10, sd = 5)
+pnorm(2, mean = 10, sd = 5)  # Should always be zero
 ```
 
 ## Question 4
